@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商品</title>
+  <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+  
+  <main id="product_tab">
+    <h1>商品の購入</h1>
+    <ul>
+      <li>
+        <input type="radio" name="product" id="plan_a" value="10枚プラン">10枚プラン
+      </li>
+      <li>
+        <input type="radio" name="product" id=plan_b value="無制限プラン">無制限プラン
+      </li>
+      <li>
+        <input type="radio" name="product" id="plan_c" value="Pro">Pro
+      </li>
+
+    </ul>
+
+   <p class="text text01">¥3,400</p>
+   <p class="text text02">¥6,980</p>
+   <p class="text text03">¥89,800</p>
+
+    <a href="#"><input type="submit" id="submit_button" value="ショッピングカートへ"></a>
+    
+  </main>
+
+  <script src="jquery.min.js"></script>
+<script>
+$(function(){
+  $('[name="product"]:radio').change(function(){
+    if($('[id="plan_a"]').prop('checked')){
+      $('.text').fadeOut();
+      $('.text01').fadeIn();
+
+    }else if($('[id="plan_b"]').prop('checked')){
+      $('.text').fadeOut();
+      $('.text02').fadeIn();
+    }else if($('[id="plan_c"]').prop('checked')){
+      $('.text').fadeOut();
+      $('.text03').fadeIn();
+    }
+
+})
+})
+</script>
+</body>
+</html>
